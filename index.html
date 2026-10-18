@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8b3157">
+<title>Món quà của tớ dành riêng cho cậu 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+:root{--pink:#ff8eae;--rose:#c94d78;--deep:#43152f;--cream:#fff3f5;--gold:#ffd98a}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:'Be Vietnam Pro',sans-serif;color:white}
+body{background:#170e2a;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.screen{min-height:100svh;display:none;position:relative;overflow:hidden;padding:24px 18px}
+.screen.active{display:flex;align-items:center;justify-content:center;animation:fade .7s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+#intro{background:radial-gradient(ellipse at 50% 35%,#e67d9e 0,#a94770 40%,#45152f 100%)}
+#intro:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 20%,#ffc7d7 0 1px,transparent 2px),radial-gradient(circle at 82% 65%,#ffe0e8 0 1px,transparent 2px);background-size:63px 71px;opacity:.45}
+.panel{position:relative;z-index:1;width:min(100%,440px);text-align:center}
+.eyebrow{font-size:clamp(12px,3vw,14px);letter-spacing:.22em;font-weight:700;text-transform:uppercase;color:#ffe1e8}
+.rule{display:flex;align-items:center;gap:12px;justify-content:center;margin:12px auto}
+.rule:before,.rule:after{content:"";width:52px;height:1px;background:#ffd5df;opacity:.75}
+.script{font-family:'Great Vibes',cursive;font-size:clamp(54px,13vw,76px);line-height:1.15;margin:5px 0 14px;text-shadow:0 5px 22px #5c153c66}
+.subtitle{font-size:14px;color:#ffeaf0;line-height:1.8}
+.glass{background:#ffffff13;border:1px solid #ffffff3c;box-shadow:0 15px 50px #23081e35,inset 0 1px #ffffff22;backdrop-filter:blur(13px);border-radius:24px;padding:20px}
+.notice{margin:22px auto 18px;padding:13px 15px;display:flex;align-items:center;gap:12px;text-align:left;border-radius:16px;background:#fff8f8;color:#7d3553;box-shadow:0 8px 25px #45152f2b;font-size:12px}
+.notice .appicon{width:34px;height:34px;border-radius:11px;background:#f5dbe5;color:#c64c77;display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.notice strong{display:block;font-size:12px}.notice small{color:#bd6281}
+.hearts{display:flex;justify-content:center;gap:13px;margin:16px 0 12px}
+.heart{font-size:30px;color:#fff7fa;filter:drop-shadow(0 4px 8px #5b173a66);transition:.3s;cursor:pointer}
+.heart.unlocked{color:#fff;transform:scale(1.12);text-shadow:0 0 18px #fff}
+.prompt{font-size:12px;font-style:italic;color:#ffe6ee;min-height:22px}
+.numgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:18px 0 12px}
+.num{border:1px solid #ffffff75;background:#ffffff20;color:white;border-radius:14px;padding:13px 5px;min-height:52px;font-size:17px;box-shadow:inset 0 1px #ffffff2a;transition:.2s}
+.num small{display:block;font-size:9px;letter-spacing:.06em;margin-top:3px;opacity:.85}
+.num:hover,.num:focus-visible{background:#ffffff3a;transform:translateY(-2px)}
+.num.chosen{background:#ffe4ec;color:#9c355d;border-color:#fff}
+.tiny{font-size:11px;color:#ffe5ec;opacity:.9}
+.primary{border:0;border-radius:999px;padding:13px 23px;background:linear-gradient(135deg,#ffb1c6,#ff79a2);color:#651b3b;font-weight:700;box-shadow:0 8px 24px #ff79a244;transition:.2s}
+.primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px #ff79a266}
+.secondary{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:999px;padding:11px 18px}
+#loading{background:radial-gradient(ellipse at 50% 45%,#24204d,#0d1029 68%,#090b1b)}
+.stars{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#a8eaff 1px,transparent 1.5px);background-size:47px 53px,79px 83px;background-position:0 0,22px 31px;opacity:.42;animation:twinkle 4s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.75}}
+.sleepy{display:flex;gap:7px;justify-content:center;margin-bottom:15px}
+.sleepy span{width:36px;height:26px;background:#32d6e8;border-radius:10px;box-shadow:0 0 22px #32d6e8aa;animation:bob 1.4s infinite alternate}
+.sleepy span:nth-child(2){animation-delay:.3s}
+@keyframes bob{to{transform:translateY(-7px)}}
+.loadheart{margin:20px auto;width:100px;height:100px;border:0;border-radius:50%;font-size:40px;color:white;background:radial-gradient(circle at 35% 25%,#ffb3d4,#f35eb0 65%,#b837a3);box-shadow:0 0 45px #ef5cb688;animation:pulse 1.4s infinite;display:grid;place-items:center}
+@keyframes pulse{50%{transform:scale(1.08);box-shadow:0 0 65px #ef5cbbaa}}
+.progress{height:12px;background:#ffffff20;border:1px solid #ffffff35;border-radius:99px;overflow:hidden;margin:18px 0 9px}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#39e2ed,#ff7cc2,#ffd98a);border-radius:99px;transition:width .15s}
+.percent{font-size:13px;color:#a6f5ff}
+#envelopeScreen{background:radial-gradient(ellipse at top,#5a194b,#1a1030 65%,#0c1027)}
+.envelope-wrap{width:min(88vw,360px);height:235px;position:relative;margin:28px auto;perspective:1000px;cursor:pointer;filter:drop-shadow(0 20px 25px #0004)}
+.envelope{position:absolute;inset:0;background:#f65d93;border-radius:7px;overflow:visible}
+.env-back{position:absolute;inset:0;background:#ee7aa4;border-radius:7px}
+.env-paper{position:absolute;left:8%;width:84%;height:85%;top:7%;background:#fff9f0;color:#8a4d64;padding:22px 15px;transition:transform .8s ease;z-index:1;border-radius:4px;box-shadow:0 2px 8px #64133c22}
+.env-paper p{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;line-height:1.7}
+.env-flap{position:absolute;inset:0;background:#ff8bb0;clip-path:polygon(0 0,100% 0,50% 58%);transform-origin:top;transition:transform .7s;z-index:3}
+.env-left{position:absolute;inset:0;background:#f56e9e;clip-path:polygon(0 0,50% 58%,0 100%);z-index:2}
+.env-right{position:absolute;inset:0;background:#e94f88;clip-path:polygon(100% 0,50% 58%,100% 100%);z-index:2}
+.env-bottom{position:absolute;inset:0;background:#ff9bb8;clip-path:polygon(0 100%,50% 48%,100% 100%);z-index:4}
+.seal{position:absolute;z-index:5;left:50%;top:55%;transform:translate(-50%,-50%);height:42px;width:42px;border-radius:50%;background:#cf3d70;color:white;display:grid;place-items:center;box-shadow:0 3px 10px #8a174d55}
+.envelope-wrap.open .env-flap{transform:rotateX(180deg);z-index:0}
+.envelope-wrap.open .env-paper{transform:translateY(-115px);z-index:5}
+.envelope-wrap.open .seal{opacity:0}
+#letterScreen{background:#1b1328;padding:22px 14px}
+.paper{position:relative;width:min(100%,490px);padding:28px 23px 25px;color:#60485a;background:repeating-linear-gradient(to bottom,#fffaf1 0,#fffaf1 31px,#eadfdb 32px);border-radius:8px;box-shadow:0 20px 70px #0006;transform:rotate(-.3deg);max-height:calc(100svh - 45px);overflow:auto}
+.paper:before{content:"";position:absolute;top:0;bottom:0;left:18px;width:1px;background:#f1c6ce}
+.paper h2{font-family:'Great Vibes',cursive;font-size:40px;font-weight:400;margin:0 0 10px;color:#a85879}
+.paper p{font-family:'Playfair Display',serif;font-size:14px;line-height:2;margin:0 0 15px}
+.paper .signature{text-align:right;color:#b24c77;font-family:'Great Vibes',cursive;font-size:27px;line-height:1.3;margin-top:8px}
+.paper .star{text-align:right;font-size:22px;color:#e6b64e}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+footer{position:absolute;bottom:9px;left:0;right:0;text-align:center;font-size:9px;opacity:.48;z-index:4}
+.toast{position:fixed;z-index:20;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff5f8;color:#843858;border-radius:999px;padding:12px 18px;font-size:12px;box-shadow:0 8px 25px #0003;transition:.3s;max-width:90%;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:360px){.glass{padding:15px}.num{padding:10px 4px}.heart{font-size:26px}.paper{padding:24px 20px}.paper p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<section id="intro" class="screen active">
+ <div class="panel">
+  <div class="eyebrow">Món quà của tớ</div><div class="rule"><span class="tiny">DÀNH RIÊNG CHO</span></div>
+  <h1 class="script" id="recipientTitle">Cậu</h1>
+  <p class="subtitle">Một món quà nhỏ, được chuẩn bị bằng tất cả sự chân thành 💗</p>
+  <div class="notice"><div class="appicon">✉</div><div><strong id="noticeTitle">Bạn có 1 tin nhắn mới từ</strong><small id="senderName">Một người luôn quý cậu</small></div><span style="margin-left:auto;color:#b47b90">now</span></div>
+  <div class="glass">
+   <div class="hearts" id="hearts"><span class="heart">♡</span><span class="heart">♡</span><span class="heart">♡</span><span class="heart">♡</span></div>
+   <div class="prompt" id="prompt">Chọn đúng rồi, nghĩ lại xem nào~</div>
+   <p class="tiny">Trả lời câu hỏi nhỏ để mở món quà nhé</p>
+   <div class="numgrid" id="numgrid">
+    <button class="num" data-n="1">1<small>♡</small></button><button class="num" data-n="2">2<small>♡</small></button><button class="num" data-n="3">3<small>♡</small></button>
+    <button class="num" data-n="4">4<small>♡</small></button><button class="num" data-n="5">5<small>♡</small></button><button class="num" data-n="6">6<small>♡</small></button>
+    <button class="num" data-n="7">7<small>♡</small></button><button class="num" data-n="8">8<small>♡</small></button><button class="num" data-n="9">9<small>♡</small></button>
+    <button class="num" data-n="0" style="grid-column:2">0<small>♡</small></button>
+   </div>
+   <button class="primary" id="unlockBtn">Mở món quà ♡</button>
+  </div>
+  <p class="tiny" style="margin-top:17px">Dành tặng cậu bằng cả tấm lòng ✨</p>
+ </div><footer>Một món quà nhỏ dành cho một người đặc biệt</footer>
+</section>
+
+<section id="loading" class="screen">
+ <div class="stars"></div><div class="panel">
+  <div class="sleepy"><span></span><span></span></div>
+  <p style="letter-spacing:.28em;font-size:10px;color:#a8f6ff">Z Z Z ...</p>
+  <h2 style="font-size:18px;font-weight:500" id="loadingText">Gần được rồi nè!!</h2>
+  <p class="subtitle" id="loadingSub">Đang chuẩn bị một điều nho nhỏ dành cho cậu...</p>
+  <button class="loadheart" id="loadHeart" aria-label="Tiếp tục">♥</button>
+  <div class="progress"><span id="progressBar"></span></div><div class="percent" id="percent">0%</div>
+  <p class="tiny">Chạm vào trái tim để tiếp tục</p>
+ </div><footer>Made with love ♡</footer>
+</section>
+
+<section id="envelopeScreen" class="screen">
+ <div class="stars"></div><div class="panel">
+  <p class="eyebrow">Một điều muốn gửi cậu</p><h2 class="script" style="font-size:54px">Gửi cậu 💌</h2>
+  <p class="subtitle">Có một lá thư nhỏ đang chờ được mở.</p>
+  <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Mở phong thư">
+   <div class="envelope"><div class="env-back"></div><div class="env-paper"><p>Gửi người tớ quý,<br>có vài lời muốn nói với cậu...</p></div><div class="env-flap"></div><div class="env-left"></div><div class="env-right"></div><div class="env-bottom"></div><div class="seal">♥</div></div>
+  </div>
+  <button class="primary" id="openLetter">Mở thư của tớ ♡</button><p class="tiny">Chạm vào phong thư nhé</p>
+ </div><footer>Gửi cậu một chút dịu dàng</footer>
+</section>
+
+<section id="letterScreen" class="screen">
+ <article class="paper">
+  <h2>Gửi cậu,</h2>
+  <p id="letterP1">Hôm nay có vẻ dịu dàng hơn một chút, không hẳn vì trời đẹp, mà vì tớ bỗng có điều muốn nói cùng cậu.</p>
+  <p id="letterP2">Cảm ơn cậu vì đã là chính mình, vì những lần cười vui, những câu chuyện nhỏ và cả những khoảnh khắc bình thường mà nhờ có cậu, chúng trở nên đáng nhớ hơn.</p>
+  <p id="letterP3">Mong cậu luôn giữ được sự ấm áp trong tim, gặp nhiều điều tốt lành và đủ can đảm để theo đuổi những điều mình yêu thích. Nếu có ngày mệt mỏi, hãy nhớ rằng cậu vẫn luôn xứng đáng được quan tâm và trân trọng.</p>
+  <p id="letterP4">Chúc cậu một ngày 20/10 thật vui, nhận được thật nhiều yêu thương và có thêm nhiều lý do để mỉm cười. Đây chỉ là một món quà nhỏ, nhưng tớ đã gửi vào đó rất nhiều chân thành.</p>
+  <div class="star">★</div><div class="signature" id="signature">Một người luôn quý cậu ♥</div>
+ </article>
+ <div class="actions"><button class="primary" id="againBtn">Đọc lại từ đầu ↻</button><button class="secondary" id="editBtn">Tuỳ chỉnh lời chúc ✎</button><button class="secondary" id="shareBtn">Sao chép lời chúc</button></div>
+ <footer>Made with a little bit of love ♡</footer>
+</section>
+<div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const screens=[...document.querySelectorAll('.screen')];
+function show(id){screens.forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'});}
+let selected=null, progress=0, timer=null, opened=false;
+const messages=[
+ 'Chưa đúng rồi, nghĩ lại xem nào~',
+ 'Hmm, cậu thử một số khác xem 💗',
+ 'Suýt đúng rồi đó, cố thêm chút nữa!',
+ 'Trái tim đang chờ cậu mở khóa nè',
+ 'Đúng rồi! Mở khóa thôi...'
+];
+document.querySelectorAll('.num').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.num').forEach(b=>b.classList.remove('chosen'));
+ btn.classList.add('chosen');selected=Number(btn.dataset.n);
+ const hearts=[...document.querySelectorAll('.heart')];
+ hearts.forEach((h,i)=>{h.classList.toggle('unlocked',i<Math.min(4,Math.ceil(selected/3)));h.textContent=i<Math.min(4,Math.ceil(selected/3))?'♥':'♡';});
+ $('#prompt').textContent=selected===7?'Hình như cậu chọn đúng số may mắn rồi đó! 💗':messages[(selected+1)%4];
+}));
+$('#unlockBtn').addEventListener('click',()=>{
+ if(!selected){toast('Chọn một con số trước nha 💗');return;}
+ if(selected!==7){toast('Chưa đúng rồi, thử chọn số 7 nhé ✨');return;}
+ $('#prompt').textContent='Đúng rồi! Mở khóa thôi...';
+ show('loading');startProgress();
+});
+function startProgress(){clearInterval(timer);progress=0;$('#progressBar').style.width='0%';$('#percent').textContent='0%';timer=setInterval(()=>{progress=Math.min(100,progress+Math.ceil(Math.random()*8));$('#progressBar').style.width=progress+'%';$('#percent').textContent=progress+'%';if(progress>=100){clearInterval(timer);$('#loadingText').textContent='Bạn vừa đánh thức một điều dễ thương...';$('#loadingSub').textContent='Món quà đã sẵn sàng dành cho cậu 💗';setTimeout(()=>show('envelopeScreen'),1100);}},170);}
+$('#loadHeart').addEventListener('click',()=>{progress=Math.min(100,progress+18);$('#progressBar').style.width=progress+'%';$('#percent').textContent=progress+'%';if(progress>=100){clearInterval(timer);$('#loadingText').textContent='Mở quà thôi nào!';setTimeout(()=>show('envelopeScreen'),450);}});
+function openEnvelope(){if(opened){show('letterScreen');return;}opened=true;$('#envelope').classList.add('open');$('#openLetter').textContent='Đọc lá thư 💌';setTimeout(()=>show('letterScreen'),1250);}
+$('#envelope').addEventListener('click',openEnvelope);$('#envelope').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope();}});
+$('#openLetter').addEventListener('click',openEnvelope);
+$('#againBtn').addEventListener('click',()=>{opened=false;selected=null;progress=0;clearInterval(timer);$('#envelope').classList.remove('open');$('#openLetter').textContent='Mở thư của tớ ♡';document.querySelectorAll('.num').forEach(b=>b.classList.remove('chosen'));document.querySelectorAll('.heart').forEach(h=>{h.textContent='♡';h.classList.remove('unlocked')});$('#prompt').textContent='Chọn đúng rồi, nghĩ lại xem nào~';show('intro');});
+$('#editBtn').addEventListener('click',()=>{
+ const recipient=prompt('Tên người nhận:', $('#recipientTitle').textContent);if(recipient!==null&&recipient.trim())$('#recipientTitle').textContent=recipient.trim();
+ const sender=prompt('Tên người gửi:', $('#signature').textContent.replace(' ♥',''));if(sender!==null&&sender.trim())$('#signature').textContent=sender.trim()+' ♥';
+ const p1=prompt('Lời mở đầu:', $('#letterP1').textContent);if(p1!==null&&p1.trim())$('#letterP1').textContent=p1.trim();
+ const p2=prompt('Lời nhắn thứ hai:', $('#letterP2').textContent);if(p2!==null&&p2.trim())$('#letterP2').textContent=p2.trim();
+ const p3=prompt('Lời chúc:', $('#letterP3').textContent);if(p3!==null&&p3.trim())$('#letterP3').textContent=p3.trim();
+ const p4=prompt('Lời kết:', $('#letterP4').textContent);if(p4!==null&&p4.trim())$('#letterP4').textContent=p4.trim();
+ toast('Đã cập nhật lời chúc trên trang này ✨');
+});
+$('#shareBtn').addEventListener('click',async()=>{
+ const text=`${$('#recipientTitle').textContent},\n\n${$('#letterP1').textContent}\n\n${$('#letterP2').textContent}\n\n${$('#letterP3').textContent}\n\n${$('#letterP4').textContent}\n\n${$('#signature').textContent}`;
+ try{await navigator.clipboard.writeText(text);toast('Đã sao chép lời chúc 💌');}
+ catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Đã sao chép lời chúc 💌');}
+});
+let toastTimer;function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2300);}
+</script>
+</body>
+</html>
